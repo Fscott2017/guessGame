@@ -23,16 +23,16 @@ function userGuess() {
     if (guessed == randomNumber) {
       document.getElementById("result").innerHTML = "Correct, You Win!";
     } else if (guessed > randomNumber) {
-      document.getElementById("result").innerHTML = "Too High~";
+      document.getElementById("result").innerHTML = "Too High.";
     } else if (guessed < randomNumber) {
-      document.getElementById("result").innerHTML = "Too Low~";
+      document.getElementById("result").innerHTML = "Too Low.";
     } else {
       console.log("Input a correct value");
     }
     document.getElementById("amountGuess").innerHTML = amountGuessed++;
   } else {
     document.getElementById("result").innerHTML =
-      "You have ran out of guesses! Play Again.";
+      "You have ran out of guesses! The answer was: " + randomNumber;
   }
 }
 $(".button").on("click", function () {
