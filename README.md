@@ -9,5 +9,6 @@ Description: This project is a simple number-guessing game, where the player can
 ->Unzip 
 ->Double click guessGame.html to run
 
-Snipits!
+### **Snipits!**
 ![](https://github.com/Fscott2017/guessGame/blob/main/level1Snip.gif)
+![](https://github.com/Fscott2017/guessGame/blob/main/level2Snip.gif)
