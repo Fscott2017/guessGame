@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="guessGame.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="gamebox">
+      <div>
+        <h1 class="title">Welcome to the Guessing Game</h1>
+        <p class="instructions">
+          Choose a diffculity <br />
+          Beginner - 4 guesses, numbers 1 through 10 <br />Intermediate - 7
+          guesses, numbers 1 through 50 <br />
+          Advanced - 11 guesses, numbers 1 through 100<br />
+          Nightmare - 15 guesses, numbers 1 through 1000
+        </p>
+      </div>
+      <div class="wrapper">
+        <div class="button-group">
+          <button Onclick="level1()" class="button">Level 1</button>
+          <button Onclick="level2()" class="button">Level 2</button>
+          <button Onclick="level3()" class="button">Level 3</button>
+          <button Onclick="level4()" class="button">Level 4</button>
+        </div>
+      </div>
+      <div class="game-area" id="guessgame">
+        <div class="content">
+          <p class="guess">
+            This is guess: <span class="guessed" id="amountGuess"></span>
+          </p>
+          <label class="">Guess the number</label>
+          <input type="number" id="guessedValue" />
+          <button Onclick="userGuess()" class="otherButtons">Check</button>
+          <button Onclick="refresh()" class="otherButtons">Play again?</button>
+          <p class="result" id="result"></p>
+        </div>
+      </div>
+    </div>
+    <script src="guessGame.js"></script>
+  </body>
+</html>
