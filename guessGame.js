@@ -21,7 +21,7 @@ function level4() {
 //function to interpret user guessed value
 function userGuess() {
   var guessed = document.getElementById("guessedValue").value;
-  if (maxGuess >= amountGuessed) {
+  if (maxGuess > amountGuessed) {
     //used to make sure user can't guess more then max guess value
     if (guessed == randomNumber) {
       document.getElementById("result").innerHTML = "Correct, You Win!";
@@ -29,14 +29,15 @@ function userGuess() {
       document.getElementById("result").innerHTML = "Too High.";
     } else if (guessed < randomNumber) {
       document.getElementById("result").innerHTML = "Too Low.";
-    } else {
-      console.log("Input a correct value");
     }
-    document.getElementById("amountGuess").innerHTML = amountGuessed++;
-  } else {
+  } else if (guessed === "") {
+    return (document.getElementById("result").innerHTML =
+      "Please select a level");
+  } else if (maxGuess == amountGuessed) {
     document.getElementById("result").innerHTML =
       "You have ran out of guesses! The answer was: " + randomNumber;
   }
+  document.getElementById("amountGuess").innerHTML = amountGuessed++;
 }
 //Used jQuery to keep button active
 $(".button").on("click", function () {
