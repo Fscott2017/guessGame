@@ -51,19 +51,30 @@ body {
 .game-area {
   display: flex;
   justify-content: center;
+  margin-top: 5px;
 }
-.content {
-  margin-top: 30px;
-  font-size: 20px;
-}
+
 .button-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  margin: auto;
+  padding-right: 10px;
 }
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
+@media screen and (max-width: 570px) {
+  .title {
+    font-size: 27px;
+    padding: 8px 26px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .otherButtons {
+    font-size: 136px;
+    display: flex;
+    margin: auto;
+  }
 }
 input {
   border-radius: 3px;
@@ -84,6 +95,7 @@ input {
   font-weight: 500;
   padding: 12px 30px;
   margin-left: 8px;
+  margin-top: 10px;
 }
 .button:hover {
   background-color: #f4c0c9;
@@ -102,7 +114,7 @@ input {
   font-size: 13px;
   font-weight: 500;
   padding: 5px 20px;
-  margin: auto;
+  margin-top: 10px;
 }
 .otherButtons:hover {
   background-color: #f4c0c9;
